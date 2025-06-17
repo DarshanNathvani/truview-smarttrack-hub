@@ -1,73 +1,97 @@
-# Welcome to your Lovable project
+🚗 TruTrack – Real-Time Vehicle Tracking Dashboard
+TruTrack is a responsive, real-time vehicle tracking dashboard designed for anti-theft monitoring and fleet management. It displays live data such as GPS location, speed, ignition status, battery level, and GSM signal directly from IoT devices like ESP32-based systems. All data is synced through Firebase Realtime Database.
 
-## Project info
+🔧 Features
+Live GPS Tracking
+View your vehicle's current location on an interactive map in real-time.
 
-**URL**: https://lovable.dev/projects/c6b43532-ce25-4c33-b223-26546efed3a4
+Speed Monitoring
+Displays the current speed with regular updates.
 
-## How can I edit this code?
+Geo-Fencing (UI Ready)
+Interface for setting safe zones and detecting zone exits (future backend integration possible).
 
-There are several ways of editing your application.
+Vehicle Status Display
 
-**Use Lovable**
+Ignition (On/Off)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c6b43532-ce25-4c33-b223-26546efed3a4) and start prompting.
+Movement status (Moving/Stopped)
 
-Changes made via Lovable will be committed automatically to this repo.
+Battery Level %
 
-**Use your preferred IDE**
+GSM Signal %
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+Distance Tracker
+Track total distance traveled per device for the current month.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+Alerts Section
+Placeholder to manage over-speeding, geo-fencing, and other alerts.
 
-Follow these steps:
+Analytics Panel
+Speed and route history visualization (planned for future version).
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Authentication System
+Login and register pages included for personalized access.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+🔌 Data Structure (Firebase)
+Example of stored data:
 
-# Step 3: Install the necessary dependencies.
-npm i
+json
+Copy
+Edit
+{
+  "bno055": {
+    "dataSource": "gps",
+    "latitude": 21.16399,
+    "longitude": 72.7837,
+    "speed": 0,
+    "timestamp": 593650
+  }
+}
+📁 Project Structure
+bash
+Copy
+Edit
+TruTrack/
+├── index.html            # Main dashboard
+├── login.html            # Sign-in and registration pages
+├── firebase-config.js    # Firebase initialization
+├── script.js             # Fetching data from Firebase
+├── style.css             # UI styling
+├── /assets               # Icons, images, fonts
+└── README.md             # Project description
+🧠 Technologies Used
+HTML, CSS, JavaScript (Frontend)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+Firebase Realtime Database
 
-**Edit a file directly in GitHub**
+Google Maps (for location display)
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+ESP32 + GPS + IMU (Data source)
 
-**Use GitHub Codespaces**
+🛠️ Setup Instructions
+Clone this repository.
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+Create a Firebase project and enable Realtime Database.
 
-## What technologies are used for this project?
+Replace Firebase config values in firebase-config.js.
 
-This project is built with:
+Deploy files to a hosting platform (e.g. GitHub Pages, Vercel, Firebase Hosting).
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+Connect ESP32 device to send GPS/IMU data to Firebase in correct structure.
 
-## How can I deploy this project?
+📈 Future Enhancements
+OTP-based secure login
 
-Simply open [Lovable](https://lovable.dev/projects/c6b43532-ce25-4c33-b223-26546efed3a4) and click on Share -> Publish.
+Historical route replay
 
-## Can I connect a custom domain to my Lovable project?
+Driver behavior analytics
 
-Yes, you can!
+SMS/email alert integration
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+Mobile app version
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+👨‍💻 Developed By
+Darshan Nathvani
+Final Year Electronics & Communication Engineer
+Real-Time Embedded & IoT Systems Developer
