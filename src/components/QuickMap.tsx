@@ -29,15 +29,17 @@ const QuickMap = () => {
           </div>
         </div>
 
-        {/* Location Info */}
+        {/* Location Info with Firebase IDs */}
         <div className="mt-4 space-y-2">
           <div className="flex justify-between text-sm">
             <span className="text-gray-600">Address:</span>
-            <span className="font-medium">123 Main St, City</span>
+            <span id="address" className="font-medium">123 Main St, City</span>
           </div>
           <div className="flex justify-between text-sm">
             <span className="text-gray-600">Coordinates:</span>
-            <span className="font-medium font-mono">40.7128, -74.0060</span>
+            <span className="font-medium font-mono">
+              <span id="latitude">40.7128</span>, <span id="longitude">-74.0060</span>
+            </span>
           </div>
         </div>
 

@@ -59,7 +59,7 @@ const LiveMap = () => {
         </CardContent>
       </Card>
 
-      {/* Map Controls and Info */}
+      {/* Map Controls and Info with Firebase IDs */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
         <Card>
           <CardHeader>
@@ -68,7 +68,7 @@ const LiveMap = () => {
           <CardContent className="space-y-3">
             <div className="flex justify-between">
               <span className="text-gray-600">Speed:</span>
-              <span className="font-semibold">45 km/h</span>
+              <span id="speed" className="font-semibold">45 km/h</span>
             </div>
             <div className="flex justify-between">
               <span className="text-gray-600">Direction:</span>
@@ -88,11 +88,13 @@ const LiveMap = () => {
           <CardContent className="space-y-3">
             <div>
               <span className="text-gray-600 text-sm">Address:</span>
-              <p className="font-semibold">123 Main Street, Downtown</p>
+              <p id="address" className="font-semibold">123 Main Street, Downtown</p>
             </div>
             <div>
               <span className="text-gray-600 text-sm">Coordinates:</span>
-              <p className="font-mono text-sm">40.7128, -74.0060</p>
+              <p className="font-mono text-sm">
+                <span id="latitude">40.7128</span>, <span id="longitude">-74.0060</span>
+              </p>
             </div>
           </CardContent>
         </Card>
